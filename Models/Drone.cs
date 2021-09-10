@@ -5,7 +5,7 @@ using TechAssessment.Utils;
 
 namespace TechAssessment.Models
 {
-    class Drone : BaseAnt
+    public class Drone : BaseAnt
     {
         public override char Symbol => 'D';
 
@@ -16,7 +16,44 @@ namespace TechAssessment.Models
 
         public override void OnUpdate()
         {
-            throw new NotImplementedException();
+            Position queenPosition = Colony.QueenOfColony.Coords;
+            if (Position.Distance(Coords, queenPosition) == 1)
+            {
+                
+            }
+            else
+            {
+                MoveTowardsQueen(queenPosition);
+            }
+        }
+        public void MoveTowardsQueen(Position queenPosition)
+        {
+            Direction moveDirection;
+
+            if (Coords.X == queenPosition.X)
+            {
+                if (Coords.Y > queenPosition.Y)
+                {
+                    moveDirection = Direction.North;
+                }
+                else
+                {
+                    moveDirection = Direction.South;
+                }
+            }
+            else
+            {
+                if (Coords.X > queenPosition.X)
+                {
+                    moveDirection = Direction.West;
+                }
+                else
+                {
+                    moveDirection = Direction.East;
+                }
+            }
+            Position targetPosition = Coords.MoveTowards(moveDirection);
+            Colony.TryMove(this, targetPosition);
         }
     }
 }

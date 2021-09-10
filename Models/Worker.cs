@@ -5,7 +5,7 @@ using TechAssessment.Utils;
 
 namespace TechAssessment.Models
 {
-    class Worker : BaseAnt
+    public class Worker : BaseAnt
     {
         public override char Symbol => 'W';
 

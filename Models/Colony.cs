@@ -10,6 +10,7 @@ namespace TechAssessment.Models
         public int Width { get; }
 
         public BaseAnt[,] _ants;
+        public Queen QueenOfColony { get; }
 
         public Colony(int width)
         {

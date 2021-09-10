@@ -5,7 +5,7 @@ using TechAssessment.Utils;
 
 namespace TechAssessment.Models
 {
-    class Soldier : BaseAnt
+    public class Soldier : BaseAnt
     {
         public override char Symbol => 'S';
         private Direction _currentDirection;

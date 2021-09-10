@@ -31,4 +31,10 @@ namespace TechAssessment.Utils
             };
             return new Position(this.X + stepX * steps, this.Y + stepY * steps);
         }
+        public static int Distance(Position a, Position b)
+        {
+            return Math.Abs(a.X - b.X) + Math.Abs(a.Y - b.Y);
+        }
+    }
 }
+    
