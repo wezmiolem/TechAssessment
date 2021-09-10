@@ -1,0 +1,13 @@
+C:\Users\chmac\source\repos\TechAssessment\bin\Debug\netcoreapp3.1\TechAssessment.exe
+C:\Users\chmac\source\repos\TechAssessment\bin\Debug\netcoreapp3.1\TechAssessment.deps.json
+C:\Users\chmac\source\repos\TechAssessment\bin\Debug\netcoreapp3.1\TechAssessment.runtimeconfig.json
+C:\Users\chmac\source\repos\TechAssessment\bin\Debug\netcoreapp3.1\TechAssessment.runtimeconfig.dev.json
+C:\Users\chmac\source\repos\TechAssessment\bin\Debug\netcoreapp3.1\TechAssessment.dll
+C:\Users\chmac\source\repos\TechAssessment\bin\Debug\netcoreapp3.1\TechAssessment.pdb
+C:\Users\chmac\source\repos\TechAssessment\obj\Debug\netcoreapp3.1\TechAssessment.csproj.AssemblyReference.cache
+C:\Users\chmac\source\repos\TechAssessment\obj\Debug\netcoreapp3.1\TechAssessment.AssemblyInfoInputs.cache
+C:\Users\chmac\source\repos\TechAssessment\obj\Debug\netcoreapp3.1\TechAssessment.AssemblyInfo.cs
+C:\Users\chmac\source\repos\TechAssessment\obj\Debug\netcoreapp3.1\TechAssessment.csproj.CoreCompileInputs.cache
+C:\Users\chmac\source\repos\TechAssessment\obj\Debug\netcoreapp3.1\TechAssessment.dll
+C:\Users\chmac\source\repos\TechAssessment\obj\Debug\netcoreapp3.1\TechAssessment.pdb
+C:\Users\chmac\source\repos\TechAssessment\obj\Debug\netcoreapp3.1\TechAssessment.genruntimeconfig.cache

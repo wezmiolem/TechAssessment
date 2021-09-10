@@ -55,5 +55,21 @@ namespace TechAssessment.Models
             }
             return availablePositions.ToArray();
         }
+        public Position[] GetAvailableEdgePositions()
+        {
+            List<Position> availableEdgePositions = new List<Position>();
+            for (int x = 0; x < Width; x++)
+            {
+                for (int y = 0; y < Width; y++)
+                {
+                    if (x == 0 || x == Width - 1 || y == 0 || y == Width - 1)
+                    {
+                        if (_ants[y, x] == null)
+                            availableEdgePositions.Add(new Position(x, y));
+                    }
+                }
+            }
+            return availableEdgePositions.ToArray();
+        }
     }
 }
