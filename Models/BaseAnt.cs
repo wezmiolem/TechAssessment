@@ -10,6 +10,7 @@ namespace TechAssessment.Models
         public Position Coords { get; set; }
 
         protected Colony Colony { get; }
+        public abstract char Symbol { get; }
 
         protected BaseAnt(Colony colony, Position coords)
         {
