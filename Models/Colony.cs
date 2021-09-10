@@ -19,7 +19,7 @@ namespace TechAssessment.Models
             QueenOfColony = AntFactory.GetQueen(this);
             AntFactory.GetAnts(this, workers, drones, soldiers);
         }
-        public void Move(BaseAnt ant, Position targetPosition, bool emptyOldPosition=false)
+        public void Move(BaseAnt ant, Position targetPosition, bool emptyOldPosition = false)
         {
             if (emptyOldPosition)
             {
@@ -70,6 +70,37 @@ namespace TechAssessment.Models
                 }
             }
             return availableEdgePositions.ToArray();
+        }
+        public void Update()
+        {
+            for (int x = 0; x < Width; x++)
+            {
+                for (int y = 0; y < Width; y++)
+                {
+                    BaseAnt ant = _ants[y, x];
+                    if (ant != null)
+                    {
+                        ant.OnUpdate();
+                    }
+                }
+            }
+        }
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            for (int y = 0; y < Width; y++)
+            {
+                for (int x = 0; x < Width; x++)
+                {
+                    BaseAnt ant = _ants[y, x];
+                    if (ant == null)
+                        sb.Append(' ');
+                    else
+                        sb.Append(ant.Symbol);
+                }
+                sb.Append('\n');
+            }
+            return sb.ToString();
         }
     }
 }
