@@ -17,8 +17,12 @@ namespace TechAssessment.Models
             _ants = new BaseAnt[Width, Width];
         }
 
-        public void Move(BaseAnt ant, Position targetPosition)
+        public void Move(BaseAnt ant, Position targetPosition, bool emptyOldPosition)
         {
+            if (emptyOldPosition)
+            {
+                _ants[ant.Coords.Y, ant.Coords.X] = null;
+            }
             _ants[targetPosition.Y, targetPosition.X] = ant;
             ant.Coords = targetPosition;
         }
@@ -29,6 +33,12 @@ namespace TechAssessment.Models
                 return false;
             return _ants[coords.Y, coords.X] == null;
 
+        }
+        public void TryMove(BaseAnt ant, Position position)
+        {
+            if (!IsSpotAvailable(position))
+                return;
+            Move(ant, position, true);
         }
     }
 }
