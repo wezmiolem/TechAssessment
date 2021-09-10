@@ -17,5 +17,6 @@ namespace TechAssessment.Models
             Colony = colony;
             Coords = coords;
         }
+        public abstract void OnUpdate();
     }
 }

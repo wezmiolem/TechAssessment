@@ -9,5 +9,11 @@ namespace TechAssessment.Models
         public int Width { get; }
 
         public BaseAnt[,] _ants;
+
+        public Colony(int width)
+        {
+            Width = width;
+            _ants = new BaseAnt[Width, Width];
+        }
     }
 }
