@@ -16,6 +16,7 @@ namespace TechAssessment.Models
         {
             Colony = colony;
             Coords = coords;
+            Colony.Move(this, coords);
         }
         public abstract void OnUpdate();
     }

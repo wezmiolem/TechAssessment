@@ -14,5 +14,9 @@ namespace TechAssessment.Models
 
         }
 
+        public override void OnUpdate()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

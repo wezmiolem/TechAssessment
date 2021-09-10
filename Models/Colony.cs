@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TechAssessment.Utils;
 
 namespace TechAssessment.Models
 {
@@ -14,6 +15,12 @@ namespace TechAssessment.Models
         {
             Width = width;
             _ants = new BaseAnt[Width, Width];
+        }
+
+        public void Move(BaseAnt ant, Position targetPosition)
+        {
+            _ants[targetPosition.Y, targetPosition.X] = ant;
+            ant.Coords = targetPosition;
         }
     }
 }
