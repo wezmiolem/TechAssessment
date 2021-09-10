@@ -15,5 +15,20 @@ namespace TechAssessment.Utils
             X = x;
             Y = y;
         }
-    }
+        public Position MoveTowards(Direction direction, int steps = 1)
+        {
+            int stepX = direction switch
+            {
+                Direction.East => 1,
+                Direction.West => -1,
+                _ => 0
+            };
+            int stepY = direction switch
+            {
+                Direction.North => -1,
+                Direction.South => 1,
+                _ => 0
+            };
+            return new Position(this.X + stepX * steps, this.Y + stepY * steps);
+        }
 }

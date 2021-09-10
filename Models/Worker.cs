@@ -16,7 +16,9 @@ namespace TechAssessment.Models
 
         public override void OnUpdate()
         {
-            throw new NotImplementedException();
+            Direction randomDirection = Extensions.GetRandomDirection();
+            Position targetPosition = Coords.MoveTowards(randomDirection);
+            Colony.TryMove(this, targetPosition);
         }
     }
 }
