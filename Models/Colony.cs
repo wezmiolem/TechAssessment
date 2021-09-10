@@ -12,13 +12,14 @@ namespace TechAssessment.Models
         public BaseAnt[,] _ants;
         public Queen QueenOfColony { get; }
 
-        public Colony(int width)
+        public Colony(int width, int workers, int drones, int soldiers)
         {
             Width = width;
             _ants = new BaseAnt[Width, Width];
+            QueenOfColony = AntFactory.GetQueen(this);
+            AntFactory.GetAnts(this, workers, drones, soldiers);
         }
-
-        public void Move(BaseAnt ant, Position targetPosition, bool emptyOldPosition)
+        public void Move(BaseAnt ant, Position targetPosition, bool emptyOldPosition=false)
         {
             if (emptyOldPosition)
             {
@@ -40,6 +41,19 @@ namespace TechAssessment.Models
             if (!IsSpotAvailable(position))
                 return;
             Move(ant, position, true);
+        }
+        public Position[] AvailablePositions()
+        {
+            List<Position> availablePositions = new List<Position>();
+            for (int x = 0; x < Width; x++)
+            {
+                for (int y = 0; y < Width; y++)
+                {
+                    if (_ants[y, x] == null)
+                        availablePositions.Add(new Position(x, y));
+                }
+            }
+            return availablePositions.ToArray();
         }
     }
 }
