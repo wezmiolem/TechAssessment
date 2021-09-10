@@ -22,5 +22,13 @@ namespace TechAssessment.Models
             _ants[targetPosition.Y, targetPosition.X] = ant;
             ant.Coords = targetPosition;
         }
+
+        public bool IsSpotAvailable(Position coords)
+        {
+            if (coords.X < 0 || coords.X > Width - 1 || coords.Y < 0 || coords.Y > Width - 1)
+                return false;
+            return _ants[coords.Y, coords.X] == null;
+
+        }
     }
 }
