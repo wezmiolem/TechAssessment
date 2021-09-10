@@ -17,7 +17,7 @@ namespace TechAssessment.Models
             Width = width;
             _ants = new BaseAnt[Width, Width];
             QueenOfColony = AntFactory.GetQueen(this);
-            AntFactory.GetAnts(this, workers, drones, soldiers);
+            AntFactory.GenerateAnts(this, workers, drones, soldiers);
         }
         public void Move(BaseAnt ant, Position targetPosition, bool emptyOldPosition = false)
         {
@@ -85,7 +85,7 @@ namespace TechAssessment.Models
                 }
             }
         }
-        public override string ToString()
+        public string Display()
         {
             StringBuilder sb = new StringBuilder();
             for (int y = 0; y < Width; y++)

@@ -15,7 +15,7 @@ namespace TechAssessment.Models
             colony.Move(queen, center);
             return queen;
         }
-        public static List<BaseAnt> GetAnts(Colony colony, int workers, int drones, int soldiers)
+        public static List<BaseAnt> GenerateAnts(Colony colony, int workers, int drones, int soldiers)
         {
             List<Position> positions = colony.AvailablePositions().ToList();
 

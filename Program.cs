@@ -14,7 +14,7 @@ namespace TechAssessment
             {
                 Console.Clear();
 
-                Console.WriteLine(colony.ToString());
+                Console.WriteLine(colony.Display());
 
                 Console.WriteLine("press enter to update colony once, q and confirm to exit");
                 input = Console.ReadLine();
